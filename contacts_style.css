@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: grid;
+    height: 0%;
+    margin-top: 0;
+    grid-template-rows: 550px;
+    grid-template-columns: 70% 30%;  /* 1fr 1fr;*/
+    grid-auto-rows: minmax(140px, auto);
+    /* grid-auto-columns: minmax(100%); 
+    justify-items: stretch;  работает
+    align-items: strtch;*/
+    
+    background-color: blueviolet;
+    position: relative;
+
+ }
+
+
+.header {
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.ul_header {
+    color: rgb(152, 153, 153);
+    text-align: center;
+    padding: 30px;
+}
+
+.header li {
+    display: inline;
+    padding: 40px;
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+   
+}
+
+a:active {
+    color: rgb(189, 70, 70);
+}
+a:visited {
+    color: rgb(173, 173, 173);
+}
+a:hover {
+    color: yellow   ;
+}
+
+
+
+.wrapper1 {
+    display: grid;
+    height: 550px;
+    margin-top: 0;
+    grid-template-rows: 550px;
+    grid-template-columns: 70% 30%;  /* 1fr 1fr;*/
+    grid-auto-rows: minmax(140px, auto);
+    /* grid-auto-columns: minmax(100%); 
+    justify-items: stretch;  работает
+    align-items: strtch;*/
+    
+    background-color: blueviolet;
+    position: relative;
+
+ }
+
+/*
+.wrapper > div{
+    padding: 1em;
+    background-color: rgb(181, 156, 156);
+}
+.wrapper > div.img1 {
+    padding: 1em;
+    background-color: orange;
+}
+
+*/
+
+.box1 {
+    background-color: #7c7c7c;
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid black;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box2 {
+    background-color: #7c7c7c;
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid black;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+.spanbox2 {
+    display: block;
+    background-color: rgb(148, 146, 146);
+    text-align: center;
+    margin-top: 50%;
+    padding: 20px;
+}
+
+/*
+.spanbox2 { КАКОГО ХРЕНА НЕ РАБОТАЕТ???
+    color: whitesmoke;
+    background-color: rgb(72, 70, 70);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+*/
+
+
+
+.p1 {
+    font-size: 220%;
+    text-shadow: 3px 2px px rgba(0,0,0,0.3);
+
+
+}
+.p2 {
+    font-size: 100%;
+    text-shadow: 3px 2px px rgba(0,0,0,0.3);
+
+}
+.p3 {
+    font-size: 250%;
+    text-shadow: 3px 2px px rgba(0,0,0,0.3);
+}
+
+
+
+
+    /*
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-left: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+    }
+    */
+
+
+
+
+.img1 {
+    background-image: url(./1.jpg);
+    background-size: cover;
+}
+
+
+/*
+
+.box1_img {
+    background-image: url(./box1_img.jpg);
+}
+.box3_img {
+    background-image: url(./box3_img.jpg);
+}
+.box1_img, .box3_img {
+    background-size: cover ;
+    background-position: center;
+}
+
+.box5_img {
+    background-image: url(./box5_img.jpg);
+    background-position: right;
+    background-size: cover;
+}
+
+*/
+
+
+
+
+
+
+
+
+/*   footer     */
+
+.footer {
+    background-color: black;
+    margin-bottom: 0;  /* почему не могу прописать margin-bottom: 0 */
+    padding: 0;
+}
+
+.ul_footer {
+    color: rgb(152, 153, 153);
+    text-align: center;
+    padding: 30px;
+    
+}
+
+.footer li {
+    display: inline;
+    padding: 40px;
+    
+}
