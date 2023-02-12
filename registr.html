@@ -7,21 +7,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="registr_style.css">
 </head>
-<body>
-
-    <div class="wrapper">
-        <div class="header">
-            <ul class="ul_header">
-                    <li><a href="./index.html">Главная</a> </li>
-                    <li><a href="./registr.html">Регистрация</a> </li>
-                    <li><a href="./contacts.html">О нас</a> </li>
-            </ul>
-        </div>
+<body class="body">
+   
+    <div class="header">
+        <ul class="ul_header">
+            <li><a href="./index.html">Главная</a> </li>
+            <li><a href="">Выбрать республику</a>
+                <ul class="submenu">
+                    <li><a href="">Дагестан</a></li>
+                    <li><a href="">Ингушетия</a></li>
+                    <li><a href="">Чечня</a></li>
+                    <li><a href="">КБР</a></li>
+                    <li><a href="">КЧР</a></li>
+                </ul>
+            </li>   
+            <li><a href="./registr.html">Регистрация</a> </li>
+            <li><a href="contacts.html">О нас</a> </li>
+        </ul>
+    </div>
         
+    <div class="wrapper">
+     
        
-            <div class="box1 img1">
-                <span class="spanbox1">Регистрация нового пользователя</span>
-                <form class="form">
+
+            
+             <form class="form">
                     
                     <div class="input">
                         Имя пользователя:
@@ -76,14 +86,30 @@
                 </form>       
             
             
-            </div>   
-        <div class="footer">
-            <ul class="ul_footer">
+              
+    </div>   
+        
+            <div class="footer">
+                <ul class="ul_footer">
                         <li><a href="http://instagram.com/moipocherk.ru">Instagram</a> </li>
                         <li><a href="http://vk.com">Вконтакте</a> </li>
                         <li><a href="https://www.youtube.com/channel/UCcZyuPeQs9HWqTq_B6Zf0KQ">YouTube</a> </li>
-            </ul>
-        </div>
+                        <li class="modal">
+                            <a href="#popup" class="open-popup">Кинуть салам</a>
+                        </li>
+                </ul>
+                
+                <div id="popup">
+                    <div class="popup-inner">
+                        <h2 class="title">Спасибо</h2>
+                        <p>
+                            Ваш салам принят!!!
+                        </p>
+                        
+                        <a href="#popup-close" class="close-popup">X</a>
+                    </div>    
+                </div>
+            </div>
 
 
     </div>      

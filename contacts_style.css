@@ -4,79 +4,150 @@
 }
 
 body {
+    /* width: 100%; */
+    /* height: 100%; */
+    position: relative;
+    max-width: 1300px;
+}
+
+@media (max-width: 1300px){
+.body{
+    max-width: 970px;
+    } 
+}
+ 
+@media (max-width: 992px){
+    .body{
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px){
+    .body{
+        max-width: none;
+    }
+}
+
+
+
+
+
+
+
+.header, .footer {
+    position: fixed;
+    background-color: black;
     width: 100%;
-    height: 100%;
-}
-
-.wrapper {
-    display: grid;
-    height: 0%;
-    margin-top: 0;
-    grid-template-rows: 550px;
-    grid-template-columns: 70% 30%;  /* 1fr 1fr;*/
-    grid-auto-rows: minmax(140px, auto);
-    /* grid-auto-columns: minmax(100%); 
-    justify-items: stretch;  работает
-    align-items: strtch;*/
     
-    background-color: blueviolet;
-    position: relative;
-
- }
-
-
-.header {
-    background-color: rgb(0, 0, 0);
+    z-index: 100;
+    }
     
-}
-
-.ul_header {
-    color: rgb(152, 153, 153);
-    text-align: center;
-    padding: 30px;
-}
-
-.header li {
-    display: inline;
-    padding: 40px;
-    list-style: none;
+    .header {
+    height: 10%;
+    left: 0;
+      top: 0;
     
-}
-
-a {
-    text-decoration: none;
-    color: whitesmoke;
-   
-}
-
-a:active {
-    color: rgb(189, 70, 70);
-}
-a:visited {
-    color: rgb(173, 173, 173);
-}
-a:hover {
-    color: yellow   ;
-}
-
-
-
-.wrapper1 {
-    display: grid;
-    height: 550px;
-    margin-top: 0;
-    grid-template-rows: 550px;
-    grid-template-columns: 70% 30%;  /* 1fr 1fr;*/
-    grid-auto-rows: minmax(140px, auto);
-    /* grid-auto-columns: minmax(100%); 
-    justify-items: stretch;  работает
-    align-items: strtch;*/
+    }
     
-    background-color: blueviolet;
-    position: relative;
+    .ul_header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        height: 74px;   /*????????*/
+        
+      
+       
+        
+    }
+    
+    /*.ul_header li {
+        display: inline;
+        background-color: rgb(0, 0, 0);
+        list-style: none;
+    
+        
+    }
+    */
+    
+    
+    .ul_header li{
+        width: auto;
+        list-style: none;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+    }
+    
+    .ul_header a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    
+    }
+    .ul_header a:hover {
+        background-color: rgb(0, 0, 0);
+    
+    }
+    .submenu{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        /*display: none;  */
+        padding: 0;
+        visibility: hidden;
+    }
+    .ul_header li:hover ul{
+        display: block;
+        visibility: visible;
+        background-color: rgb(0, 0, 0);
+        padding-top: 23px;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+       
+    }
+    
+    a:active {
+        color: rgb(189, 70, 70);
+    }
+    a:visited {
+        color: rgb(173, 173, 173);
+    }
+    a:hover {
+        color: yellow   ;
+    }
 
- }
 
+    .wrapper {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-rows: 550px;
+        grid-template-columns: 70% 30%;  /* 1fr 1fr;*/
+        grid-auto-rows: minmax(140px, auto);
+        grid-auto-columns: minmax(100%); /* не работает*/
+        justify-items: stretch;
+        align-items: strtch;
+        background-color: blueviolet;
+        position: absolute;
+        top: 80px;
+        margin-bottom: 390px;  /*какого хрена не работает*/
+        padding-bottom: 100px;
+        }
+
+
+
+ 
+ 
+
+
+
+
+  
 /*
 .wrapper > div{
     padding: 1em;
@@ -119,51 +190,7 @@ a:hover {
     padding: 20px;
 }
 
-/*
-.spanbox2 { КАКОГО ХРЕНА НЕ РАБОТАЕТ???
-    color: whitesmoke;
-    background-color: rgb(72, 70, 70);
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-}
-*/
 
-
-
-.p1 {
-    font-size: 220%;
-    text-shadow: 3px 2px px rgba(0,0,0,0.3);
-
-
-}
-.p2 {
-    font-size: 100%;
-    text-shadow: 3px 2px px rgba(0,0,0,0.3);
-
-}
-.p3 {
-    font-size: 250%;
-    text-shadow: 3px 2px px rgba(0,0,0,0.3);
-}
-
-
-
-
-    /*
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    margin-left: 50%;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding: 10px;
-    }
-    */
 
 
 
@@ -174,51 +201,109 @@ a:hover {
 }
 
 
-/*
-
-.box1_img {
-    background-image: url(./box1_img.jpg);
-}
-.box3_img {
-    background-image: url(./box3_img.jpg);
-}
-.box1_img, .box3_img {
-    background-size: cover ;
-    background-position: center;
-}
-
-.box5_img {
-    background-image: url(./box5_img.jpg);
-    background-position: right;
-    background-size: cover;
-}
-
-*/
 
 
 
-
-
-
-
-
-/*   footer     */
 
 .footer {
-    background-color: black;
-    margin-bottom: 0;  /* почему не могу прописать margin-bottom: 0 */
-    padding: 0;
-}
-
-.ul_footer {
-    color: rgb(152, 153, 153);
-    text-align: center;
-    padding: 30px;
+    height: 10%;
+    bottom: 0;
+    }
     
-}
-
-.footer li {
-    display: inline;
-    padding: 40px;
+    .ul_footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        height: 74px; 
+        
+    }
     
-}
+    
+    
+    
+    
+    .footer li{
+        width: auto;
+        list-style: none;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+    }
+    
+    
+    
+    
+    
+    
+    /*Модальное окно*/
+    .modal{
+        position: relative;
+       
+        
+        
+    }
+    
+    .open-popup{
+        display: inline-block;
+     
+       
+       
+        text-decoration: none;
+    
+    }
+    
+    #popup{
+        position: fixed;    
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0,.7);
+      
+        display: flex ;
+        justify-content: center;
+    
+        align-items: center;
+       
+        visibility: hidden;
+    }
+    #popup:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup-inner{
+        position: relative;
+        background-color: #fff;
+        max-width: 500px;
+        padding: 25px;
+    
+        transform:scale(0);
+    
+        transition:all .5s ease;
+    }
+    
+    .popup-inner p{
+        margin-top: 20px;
+    }
+    
+    #popup:target .popup-inner{
+      
+        transform:scale(1);
+    }
+    
+    .close-popup{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(24, 134, 7);
+        
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+    }
+    
+    a.open-popup:hover {
+        color: red   ;
+    }
